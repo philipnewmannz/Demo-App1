@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html manifest="cache.manifest">
+<head>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  	<link rel="stylesheet" type="text/css" href="scripts/jquery.mobile.flatui.css" />
+  	<link rel="stylesheet" type="text/css" href="scripts/website.css" />
+  	<link rel="shortcut icon" href="images/favicon.ico" />
+  	<script src="scripts/jquery.min.js"></script>
+  	<script src="scripts/jquery.mobile-1.4.0-rc.1.js"></script>
+    <script src="scripts/jquery.website.js"></script>
+</head>
+<body>
+  	<div data-role="page">
+
+        
+    
+        <div data-role="header">
+          <a data-iconpos="notext" data-icon="home" title="Home" href="home.html" data-role="button">Home</a>
+          <h1>Phone List</h1>
+          <a data-iconpos="notext" data-icon="bars" title="Menu" href="#panel-right" data-role="button">Menu</a>
+        </div>
+
+        <div data-role="content" role="main">
+           
+         
+          	<ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+                <li><a href="index.html">Alex Wickerham</a></li>
+                <li><a href="index.html">Avery Johnson</a></li>
+                <li><a href="index.html">Bob Cabot</a></li>
+                <li><a href="index.html">Caleb Booth</a></li>
+                <li><a href="index.html">Christopher Adams</a></li>
+                <li><a href="index.html">Culver James</a></li>
+                <li><a href="index.html">Dhilip Newman (LCPL)</a></li>
+                <li><a href="index.html">Dlex Wickerham</a></li>
+                <li><a href="index.html">Every Johnson</a></li>
+                <li><a href="index.html">Rob Cabot</a></li>
+                <li><a href="index.html">Raleb Booth</a></li>
+                <li><a href="index.html">Shristopher Adams</a></li>
+                <li><a href="index.html">Sulver James</a></li>
+            </ul>
+            
+        </div>
+        
+        <!-- /panel -->
+        <div data-role="panel" data-position="right" data-position-fixed="true" darta-dismissible="true" data-display="overlay" data-theme="a" id="panel-right">
+            
+    		<ul data-role="listview">
+            	<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li data-icon="phone" data-theme="b"><a href="phonelist.html">Phone List</a></li>
+                <li data-theme="b"><a href="#panel-fixed-page2">Ajax Navigation</a></li>
+                <li data-theme="b"><a href="#panel-fixed-page2">Autocomplete</a></li>
+                <li data-theme="b"><a href="#panel-fixed-page2">Buttons</a></li>
+        	</ul>
+        </div>
+    	<!-- /panel -->
+  
+	</div>
+    
+</body>
+</html>

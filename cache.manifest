@@ -1,0 +1,34 @@
+CACHE MANIFEST
+# 2015-01-24: v1.0.1
+# 1222323232323232323232323232rwerwe
+
+# Explicitly cached 'master entries'.
+CACHE:
+scripts/website.css
+scripts/jquery.mobile.flatui.css
+scripts/jquery.min.js
+scripts/jquery.website.js
+scripts/jquery.mobile-1.4.0-rc.1.js
+scripts/images/ajax-loader.gif
+fonts/lato-regular.woff
+fonts/lato-bold.woff
+fonts/Flat-UI-Icons-24.woff
+fonts/lato-regular.ttf
+fonts/lato-bold.ttf
+fonts/Flat-UI-Icons-24.ttf
+images/ajax-loader.gif
+images/favicon.ico
+images/rnzalr.png
+offline.html
+index.html
+home.html
+phonelist.html
+settings.html
+config.json
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+FALLBACK:
+* offline.html

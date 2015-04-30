@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html manifest="cache.manifest">
+<head>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  	<link rel="stylesheet" type="text/css" href="scripts/jquery.mobile.flatui.css" />
+  	<link rel="stylesheet" type="text/css" href="scripts/website.css" />
+  	<link rel="shortcut icon" href="images/favicon.ico" />
+  	<script src="scripts/jquery.min.js"></script>
+  	<script src="scripts/jquery.mobile-1.4.0-rc.1.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.auth.js"></script>
+	<script src="scripts/jquery.website.js"></script>
+</head>
+<body>
+  	<div data-role="page">
+
+        
+    
+        <div data-role="header">
+          <a data-iconpos="notext" data-icon="home" title="Home" href="settings.html" data-role="button">Home</a>
+          <h1>Settings</h1>
+          <a data-iconpos="notext" data-icon="bars" title="Menu" href="#panel-right" data-role="button">Menu</a>
+        </div>
+
+        <div data-role="content" role="main">
+           
+         <ul data-role="listview" data-inset="true">
+            	<li data-icon="user"><a href="phonelist.html">Update Profile</a></li>
+                <li data-icon="check"><a href="index.html">Mobile Appsettings</a></li>
+         </ul>
+    
+        </div>
+        
+        <!-- /panel -->
+        <div data-role="panel" data-position="right" data-position-fixed="true" darta-dismissible="true" data-display="overlay" data-theme="a" id="panel-right">
+            
+    		<ul data-role="listview">
+            	<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li data-icon="phone" data-theme="b"><a href="phonelist.html" data-ajax="false">Phone List</a></li>
+                <li data-theme="b"><a href="#panel-fixed-page2">Ajax Navigation</a></li>
+                <li data-theme="b"><a href="#panel-fixed-page2">Autocomplete</a></li>
+                <li data-theme="b"><a href="javascript:app.logout();" data-ajax="false">Logout</a></li>
+        	</ul>
+        </div>
+    	<!-- /panel -->
+  
+	</div>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  	<link rel="stylesheet" type="text/css" href="scripts/jquery.mobile.flatui.css" />
+  	<link rel="stylesheet" type="text/css" href="scripts/website.css" />
+  	<script src="scripts/jquery.min.js"></script>
+  	<script src="scripts/jquery.mobile-1.4.0-rc.1.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.auth.js"></script>
+	<script src="scripts/jquery.website.js"></script>
+    <title>Home</title>
+</head>
+<body data-pagename="index.html">
+  	
+    <div data-role="page" id="login">
+		
+        <div data-role="popup" id="login_error" data-overlay-theme="a" data-theme="a" class="ui-corner-all ui-popup ui-body-a ui-overlay-shadow" data-transition="flip">
+            <div data-role="header" data-theme="a" class="ui-corner-top ui-header ui-bar-a" role="banner">
+                <h1 class="ui-title" role="heading" aria-level="1">Login Error</h1>
+            </div>
+            <div role="main" class="ui-corner-bottom ui-content">
+                <h3 class="ui-title">Invalid Login</h3>
+                <p id="error_text_msg">The details you have provided are not valid.</p>
+                <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">OK</a>
+            </div>
+        </div>
+
+        <div data-role="content" role="main">
+           
+            <div align="center"><img src="images/rnzalr.png"></div>
+               
+            Username / Email
+            <input type="text" id="login_username" placeholder="" />
+            Password
+            <input type="password" id="login_password" placeholder="" />
+           
+            <input type="checkbox" name="checkbox-a" data-theme="c" id="checkbox-a" checked="checked" />
+            <label for="checkbox-a">Keep me signed in.</label>
+            <button data-theme="e" id="login_button">Login</button>
+            <br>
+            
+            <div align="center">
+            	<p><a href="#register" data-transition="fade">Register for account</a></p>
+                <p><a href="#recover" data-transition="fade">Forgot your password?</a></p>
+            </div>
+         
+    
+        </div>
+  
+	</div>
+    
+    <div data-role="page" id="register">
+		
+        <div data-role="popup" id="register_error" data-overlay-theme="a" data-theme="a" class="ui-corner-all ui-popup ui-body-a ui-overlay-shadow" data-transition="flip">
+            <div data-role="header" data-theme="a" class="ui-corner-top ui-header ui-bar-a" role="banner">
+                <h1 class="ui-title" role="heading" aria-level="1">Register Error</h1>
+            </div>
+            <div role="main" class="ui-corner-bottom ui-content">
+                <h3 class="ui-title">Invalid Details</h3>
+                <p id="error_text_reg">The details you have provided are not valid.</p>
+                <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">OK</a>
+            </div>
+        </div>
+
+        <div data-role="header">
+          <h1>Register</h1>
+        </div>
+
+        <div data-role="content" role="main">
+           
+            Username
+            <input type="text" id="reg_username" placeholder="" />
+            
+            Email
+            <input type="text" id="reg_email" placeholder="" />
+                       
+            Password
+            <input type="password" id="reg_password" placeholder="" />
+            
+            Confirm Password
+            <input type="password" id="reg_password2" placeholder="" />
+
+            <button data-theme="e" id="register_button">Register</button>
+            <br>
+            
+            <div align="center">
+            	<a href="#login" data-transition="fade">Login to existing account</a>
+            </div>
+    
+        </div>
+  
+	</div>
+    
+    <div data-role="page" id="recover">
+		
+        <div data-role="popup" id="recover_error" data-overlay-theme="a" data-theme="a" class="ui-corner-all ui-popup ui-body-a ui-overlay-shadow" data-transition="flip">
+            <div data-role="header" data-theme="a" class="ui-corner-top ui-header ui-bar-a" role="banner">
+                <h1 class="ui-title" role="heading" aria-level="1">Register Error</h1>
+            </div>
+            <div role="main" class="ui-corner-bottom ui-content">
+                <h3 class="ui-title">Invalid Details</h3>
+                <p>The details you have provided are not valid.</p>
+                <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">OK</a>
+            </div>
+        </div>
+
+        <div data-role="header">
+          <h1>Forgot password?</h1>
+        </div>
+
+        <div data-role="content" role="main">
+           
+           
+            
+            Email
+            <input type="text" id="login_email" placeholder="" />
+
+           	<button data-theme="e" id="recover_button">Send Email</button>
+            <br>
+          	
+            
+            <div align="center">
+            	<a href="#login" data-transition="fade">Login to existing account</a>
+            </div>
+    
+        </div>
+  
+	</div>
+    
+</body>
+</html>
