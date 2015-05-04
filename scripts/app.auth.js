@@ -6,6 +6,7 @@ app.auth = {
     login: function (username,password,remember) {
     // define error.
 		var error = 0;
+		var remember = 1;
 	
 	// json string.
 		if (username.length < 4) {
@@ -25,12 +26,14 @@ app.auth = {
 				html: ""
 			});
 			
+			var jsonstr = '{"username":"'+username+'","password":"'+password+'","remember":"'+remember+'"}';
+			var payload = btoa(jsonstr);
+			
 			$.ajax({
 			  type: "GET",
 			  url: window.api_url+'/auth',
 			  timeout: 10000,
-			  data: { action: 'auth' },
-			  headers: {'ApiKey': app.apiKey,'ApiUser': username, 'ApiPass': password },
+			  data: { action: 'auth', apiKey: app.apiKey, payload: payload},
 			  dataType: "jsonp"
 			}).done(function( data ) {
 				
@@ -98,12 +101,14 @@ app.auth = {
 				html: ""
 			});
 			
+			var jsonstr = '{"username":"'+username+'","password":"'+password+'"}';
+			var payload = btoa(jsonstr);
+			
 			$.ajax({
 			  type: "GET",
 			  url: window.api_url+'/reg',
 			  timeout: 10000,
-			  data: { action: 'reg','email': email.toLowerCase() },
-			  headers: {'ApiKey': app.apiKey,'ApiUser': username, 'ApiPass': password },
+			  data: { action: 'reg',apiKey: app.apiKey, 'email': email.toLowerCase(), payload: payload },
 			  dataType: "jsonp"
 			}).done(function( data ) {
 				

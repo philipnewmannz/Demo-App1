@@ -7,9 +7,7 @@ $(document).ready(function() {
 			window.api_url = config.api_url;
 		} 
 	});
-	
-	
-	
+
 	var pageName = $('body').attr('data-pagename');
 	
 // click the login button.
@@ -18,9 +16,7 @@ $(document).ready(function() {
 		var apiUsername = $('#login_username').val();
 		var apiPassword = $('#login_password').val();
 		$.mobile.loading("show");
-		
 		app.auth.login(apiUsername,apiPassword);
-		
 		return false;
 	});
 	
@@ -33,14 +29,12 @@ $(document).ready(function() {
 		var apiPassword = $('#reg_password').val();
 		var apiPassword2= $('#reg_password2').val();
 		$.mobile.loading("show");
-	
 		app.auth.register(apiUsername,apiEmail,apiPassword);
-		
 		return false;
 	});
 	
 // click the logout button.
-	$("#logout_button").click(function() {
+	$("#logout_button").unbind("click").click(function() {
 	// If checked
 		app.auth.logout();
 		return false;
